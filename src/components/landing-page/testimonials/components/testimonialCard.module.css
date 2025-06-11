@@ -1,0 +1,29 @@
+.testimonialCard {
+  transform: rotateY(180deg);
+  backface-visibility: hidden; 
+  transition: transform 1s ease-in-out;
+}
+
+.testimonialCardContent {
+  
+}
+
+:global(.card-visible).testimonialCard {
+  /* animation: rotate 10s ease-in forwards 0.3s; */
+  transform: rotateY(0deg)
+}
+
+/* :global(.card-visible).testimonialCard .testimonialCardContent{
+  animation: toggleVisibility 10s ease-in forwards 0.3s;
+} */
+
+
+@keyframes rotate {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+

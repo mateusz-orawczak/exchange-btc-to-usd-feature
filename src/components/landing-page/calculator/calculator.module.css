@@ -1,0 +1,22 @@
+.container {
+  @media (width >= 64rem) {
+    height: 60vh;
+  }
+}
+
+:global(.pending).transactionButton,
+:global(.success).transactionButton {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

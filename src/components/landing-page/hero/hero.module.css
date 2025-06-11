@@ -1,0 +1,29 @@
+.container {
+  height: 90vh;
+}
+
+.contentContainer {
+  @media (width >= 64rem) {
+    position: fixed;
+    max-width: 40%;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards 0.3s;
+  }
+}
+
+.left {
+  left: calc(-0.9% * max(var(--scrollPercentage), 10) + 250px);
+}
+
+.right {
+  right: calc(-0.9% * max(var(--scrollPercentage), 10) + 250px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
